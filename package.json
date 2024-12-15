@@ -1,0 +1,24 @@
+{
+  "name": "stickerfy-cypress-js",
+  "version": "1.0.0",
+  "description": "Stickerfy automation tests with Cypress and JS",
+  "scripts": {
+    "lint": "npx standard",
+    "lint:fix": "npx standard --fix",
+    "test": "cypress run",
+    "cy:open": "cypress open"
+  },
+  "keywords": [
+    "Stickerfy",
+    "cypress.io"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alisson-t-bucchi/stickerfy-cypress-js.git"
+  },
+  "author": "Alisson Bucchi",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.16.1"
+  }
+}
