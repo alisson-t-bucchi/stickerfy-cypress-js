@@ -1,51 +1,51 @@
 # Cypress Test Suite for Stickerfy
 
-Este repositório contém um conjunto de testes automatizados para validar a funcionalidade dos botões "Go to Cart" (ou "Shopping Cart") e "Checkout" no site [Stickerfy](https://stickerfy.herokuapp.com/). Os testes foram desenvolvidos usando a biblioteca [Cypress](https://www.cypress.io/), uma ferramenta popular para testes end-to-end.
+This repository contains a suite of automated tests to validate the functionality of the "Go to Cart" (or "Shopping Cart") and "Checkout" buttons on the [Stickerfy](https://stickerfy.herokuapp.com/) website. The tests were developed using the [Cypress](https://www.cypress.io/) library, a popular tool for end-to-end testing.
 
-## Visão Geral dos Testes
+## Test Overview
 
-Os testes cobrem as seguintes funcionalidades:
+The tests cover the following functionalities:
 
-1. **Compra do adesivo Happy Stickerfy**
-2. **Compra do adesivo Sad Stickerfy**
-3. **Compra do adesivo Angry Stickerfy**
-4. **Compra de um adesivo de cada tipo**
-5. **Compra de dois adesivos Happy Stickerfy e um de cada tipo**
+1. **Purchase of the Happy Stickerfy sticker**
+2. **Purchase of the Sad Stickerfy sticker**
+3. **Purchase of the Angry Stickerfy sticker**
+4. **Purchase of one sticker of each type**
+5. **Purchase of two Happy Stickerfy stickers and one of each type**
 
-Cada caso de teste valida o seguinte:
-- Capacidade de adicionar produtos ao carrinho através do botão "Go to Cart" ou "Shopping Cart".
-- Capacidade de acessar o carrinho e proceder para a finalização da compra (Checkout).
-- Verificação de elementos importantes na página de Checkout, como o título "Checkout" e os valores totais.
+Each test case validates the following:
+- The ability to add products to the cart using the "Go to Cart" or "Shopping Cart" button.
+- The ability to access the cart and proceed to checkout.
+- Verification of important elements on the Checkout page, such as the "Checkout" title and total amounts.
 
-## Como Configurar o Ambiente
+## Setting Up the Environment
 
-### Requisitos
-- Node.js instalado em sua máquina.
-- Cypress instalado globalmente ou localmente no projeto.
+### Requirements
+- Node.js installed on your machine.
+- Cypress installed globally or locally in the project.
 
-### Instalação
-1. Clone este repositório:
+### Installation
+1. Clone this repository:
    ```bash
-   git clone <URL_DO_REPOSITORIO>
-   cd <NOME_DO_REPOSITORIO>
+   git clone <REPOSITORY_URL>
+   cd <REPOSITORY_NAME>
    ```
 
-2. Instale as dependências do Cypress:
+2. Install Cypress dependencies:
    ```bash
    npm install
    ```
 
-3. Abra o Cypress:
+3. Open Cypress:
    ```bash
    npx cypress open
    ```
 
-4. No painel do Cypress, selecione o arquivo de teste para executá-lo.
+4. In the Cypress dashboard, select the test file to execute it.
 
-## Estrutura do Teste
+## Test Structure
 
-### Configuração Inicial
-Cada teste utiliza o comando `beforeEach` para acessar a página inicial do Stickerfy e verificar que o título da página é "Stickerfy":
+### Initial Setup
+Each test uses the `beforeEach` command to access the Stickerfy homepage and verify that the page title is "Stickerfy":
 ```javascript
 beforeEach(() => {
   cy.visit("https://stickerfy.herokuapp.com/");
@@ -53,53 +53,52 @@ beforeEach(() => {
 });
 ```
 
-### Casos de Teste
+### Test Cases
 
-#### 1. Compra do adesivo Happy Stickerfy
-Adiciona o adesivo "Happy" ao carrinho e finaliza a compra. Verifica o total e mensagens de sucesso:
+#### 1. Purchase of the Happy Stickerfy sticker
+Adds the "Happy" sticker to the cart and completes the purchase. Verifies the total and success messages:
 ```javascript
 cy.contains('h4', 'Total: $5.5').should('be.visible')
 cy.contains('h4', 'Thanks for your order!').should('be.visible')
 ```
 
-#### 2. Compra do adesivo Sad Stickerfy
-Segue o mesmo fluxo para o adesivo "Sad" e verifica o total correto:
+#### 2. Purchase of the Sad Stickerfy sticker
+Follows the same flow for the "Sad" sticker and verifies the correct total:
 ```javascript
 cy.contains('h4', 'Total: $7').should('be.visible')
 ```
 
-#### 3. Compra do adesivo Angry Stickerfy
-Valida o processo para o adesivo "Angry" com total de $4.5.
+#### 3. Purchase of the Angry Stickerfy sticker
+Validates the process for the "Angry" sticker with a total of $4.5.
 
-#### 4. Compra de um adesivo de cada tipo
-Adiciona um de cada adesivo e verifica o total de $17.
+#### 4. Purchase of one sticker of each type
+Adds one of each sticker and verifies the total of $17.
 
-#### 5. Compra de dois adesivos Happy e um de cada tipo
-Adiciona dois adesivos "Happy" e um de cada outro tipo, verificando o total de $22.5.
+#### 5. Purchase of two Happy Stickerfy stickers and one of each type
+Adds two "Happy" stickers and one of each other type, verifying the total of $22.5.
 
-## Tecnologias Utilizadas
-- **Cypress**: Para automação de testes end-to-end.
-- **JavaScript**: Linguagem de programação usada nos testes.
+## Technologies Used
+- **Cypress**: For end-to-end test automation.
+- **JavaScript**: Programming language used in the tests.
 
-## Executando os Testes
-1. Certifique-se de que o ambiente está configurado conforme descrito acima.
-2. Abra o Cypress com:
+## Running the Tests
+1. Ensure the environment is set up as described above.
+2. Open Cypress with:
    ```bash
    npx cypress open
    ```
-3. Selecione o arquivo de teste e execute os casos desejados.
+3. Select the test file and execute the desired cases.
 
-## Resultados Esperados
-Os testes devem:
-- Passar com sucesso para todos os cenários descritos.
-- Validar a funcionalidade do carrinho de compras e do botão "Checkout", garantindo que os valores e mensagens exibidos correspondem às expectativas.
+## Expected Results
+The tests should:
+- Successfully pass for all described scenarios.
+- Validate the functionality of the shopping cart and the "Checkout" button, ensuring the displayed values and messages match expectations.
 
-## Contribuições
-Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias ou novos casos de teste.
+## Contributions
+Feel free to open issues or submit pull requests with improvements or new test cases.
 
 ---
 
-**Autor**: [Seu Nome Aqui]
+**Author**: [Your Name Here]
 
-**Licença**: Este projeto está sob a licença [MIT](./LICENSE).
-
+**License**: This project is licensed under the [MIT](./LICENSE) license.
