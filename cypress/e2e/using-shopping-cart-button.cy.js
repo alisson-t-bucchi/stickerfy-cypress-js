@@ -1,5 +1,6 @@
+// npx cypress open
 
-describe("using go to cart button to buy stickers", () => {
+describe("using shopping cart button", () => {
 
   beforeEach(() => {
     cy.visit("https://stickerfy.herokuapp.com/");
@@ -17,7 +18,7 @@ describe("using go to cart button to buy stickers", () => {
 
     cy.get(
       'a[href="/shopping-cart/"]')
-      .contains("Go to cart")
+      .contains("Shopping Cart")
       .click();
 
     cy.get(
@@ -39,7 +40,7 @@ describe("using go to cart button to buy stickers", () => {
 
     cy.get(
       'a[href="/shopping-cart/"]')
-      .contains("Go to cart")
+      .contains("Shopping Cart")
       .click();
 
     cy.get(
@@ -53,7 +54,7 @@ describe("using go to cart button to buy stickers", () => {
   });
 
   it("select and buy Angry Stickerfy", () => {
-
+    
     cy.get(
       'a[href="/add-to-cart/5dd8e2b26c26d0000a675cfa"]')
       .contains('Add to cart')
@@ -61,7 +62,7 @@ describe("using go to cart button to buy stickers", () => {
 
     cy.get(
       'a[href="/shopping-cart/"]')
-      .contains("Go to cart")
+      .contains("Shopping Cart")
       .click();
 
     cy.get(
@@ -93,7 +94,7 @@ describe("using go to cart button to buy stickers", () => {
 
     cy.get(
       'a[href="/shopping-cart/"]')
-      .contains("Go to cart")
+      .contains("Shopping Cart")
       .click();
 
     cy.get(
@@ -127,7 +128,7 @@ describe("using go to cart button to buy stickers", () => {
   
       cy.get(
         'a[href="/shopping-cart/"]')
-        .contains("Go to cart")
+        .contains("Shopping Cart")
         .click();
   
       cy.get(
