@@ -3,9 +3,9 @@
 describe("using shopping cart button", () => {
 
   beforeEach(() => {
-    cy.visit("https://stickerfy.herokuapp.com/");
-  
-    cy.title().should("be.equal", "Stickerfy");
+    cy.visit("https://stickerfy.herokuapp.com/", { timeout: 5000 });
+    cy.title().should('equal', 'Stickerfy')
+    cy.get('a.navbar-brand').should('contain', 'Stickerfy')
   })
 
 
@@ -140,5 +140,11 @@ describe("using shopping cart button", () => {
       cy.contains('h4', 'Total: $22.5').should('be.visible')
       cy.contains('h4', 'Thanks for your order!').should('be.visible')
   });
-
+  
+  afterEach(() => {
+    cy.clearCookies();
+    cy.clearLocalStorage();
+  });
+  
 });
+

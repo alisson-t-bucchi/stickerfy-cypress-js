@@ -2,9 +2,9 @@
 describe("using go to cart button to buy stickers", () => {
 
   beforeEach(() => {
-    cy.visit("https://stickerfy.herokuapp.com/");
-  
-    cy.title().should("be.equal", "Stickerfy");
+    cy.visit("https://stickerfy.herokuapp.com/", { timeout: 5000 });
+    cy.title().should('equal', 'Stickerfy')
+    cy.get('a.navbar-brand').should('contain', 'Stickerfy')
   })
 
 
@@ -138,6 +138,11 @@ describe("using go to cart button to buy stickers", () => {
       cy.contains('h1','Checkout').should('be.visible')
       cy.contains('h4', 'Total: $22.5').should('be.visible')
       cy.contains('h4', 'Thanks for your order!').should('be.visible')
+  });
+
+  afterEach(() => {
+    cy.clearCookies();
+    cy.clearLocalStorage();
   });
 
 });
