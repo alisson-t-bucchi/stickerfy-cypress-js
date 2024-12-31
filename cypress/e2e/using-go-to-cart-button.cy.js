@@ -1,3 +1,4 @@
+// npx cypress open
 
 describe("using go to cart button to buy stickers", () => {
 
