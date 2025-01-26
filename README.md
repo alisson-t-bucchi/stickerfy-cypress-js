@@ -2,7 +2,7 @@
 
 This repository contains a suite of automated tests to validate the functionality of the "Go to Cart" (or "Shopping Cart") and "Checkout" buttons on the [Stickerfy](https://stickerfy.herokuapp.com/) website. The tests were developed using the [Cypress](https://www.cypress.io/) library, a popular tool for end-to-end testing.
 
-Include some updates, integration with [AllureReposrts](https://allurereport.org/) to create detailed test reports and [JMeter](https://jmeter.apache.org/) for load, stress, capacity and regression tests. 
+Include some updates, integration with [AllureReposrts](https://allurereport.org/) to create detailed test reports and [K6](https://k6.io/) for load and performance tests.
 
 ## Test Overview
 
