@@ -1,4 +1,5 @@
-// npx cypress open
+// npx cypress open 
+//npm run test
 
 describe("using go to cart button to buy stickers", () => {
 
