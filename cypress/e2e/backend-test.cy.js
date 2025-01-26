@@ -1,8 +1,10 @@
 // npx cypress open
+
 //Authentication errors (401)
 //Authorization errors (403)
 //Server errors (500)
 //Invalid inputs 
+
 
 describe('Backend tests', () => {
     const endpoints = [
