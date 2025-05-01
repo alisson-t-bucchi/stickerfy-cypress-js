@@ -98,7 +98,7 @@ The tests should:
 - Validate the functionality of the shopping cart and the "Checkout" button, ensuring the displayed values and messages match expectations.
 
 ### Setting up Allure Report for Cypress
-To use Allure Reports is necessary have Java 8 or higher and Allure Report installed in environment variable system. For furhter information see page here [Install Allure Report for Windows](https://allurereport.org/docs/install/) 
+To use Allure Reports is necessary have Java 8 or higher and Allure Report installed in environment variable system. For furhter information see page here [Install or upgrade Allure Report](https://allurereport.org/docs/install/) 
 
 1. Install the Allure Cypress adapter. 
 See complete installation page here [AllureReport](https://allurereport.org/docs/cypress/)
