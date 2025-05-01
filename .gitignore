@@ -1,5 +1,5 @@
 cypress/screenshots/
 cypress/videos/
 node_modules/
-allure_results
+allure-results
 
