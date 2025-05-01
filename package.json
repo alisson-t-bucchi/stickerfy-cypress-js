@@ -1,0 +1,35 @@
+{
+  "name": "stickerfy-cypress-js",
+  "version": "1.0.0",
+  "description": "Stickerfy automation tests with Cypress and JS",
+  "scripts": {
+    "lint": "npx standard",
+    "lint:fix": "npx standard --fix",
+    "cy:open": "cypress open",
+    "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
+    "test:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
+    "clean:allure": "rmdir /s /q allure-results",
+    "test": "npm run clean:allure && cypress run"
+  },
+  "keywords": [
+    "Stickerfy",
+    "cypress.io"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alisson-t-bucchi/stickerfy-cypress-js.git"
+  },
+  "author": "Alisson Bucchi",
+  "license": "MIT",
+  "homepage": "https://github.com/alisson-t-bucchi/stickerfy-cypress-js.git#readme",
+  "devDependencies": {
+    "allure-commandline": "^2.32.0",
+    "allure-cypress": "^3.2.1",
+    "cypress": "^14.0.0",
+    "cypress-fs": "^0.2.6",
+    "cypress-slow-down": "^1.3.1"
+  },
+  "dependencies": {
+    "@shelex/allure-js-commons-browser": "^1.5.0"
+  }
+}
